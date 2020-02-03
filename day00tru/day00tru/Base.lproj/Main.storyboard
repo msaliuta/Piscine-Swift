@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JXV-FE-B9J">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -40,8 +40,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="ac_BTN:" destination="JXV-FE-B9J" eventType="touchUpInside" id="0EB-fB-6mB"/>
-                                                            <action selector="ac_BTN:" destination="73e-mb-Bdu" eventType="touchUpInside" id="SX7-pc-tvH"/>
+                                                            <action selector="clean:" destination="JXV-FE-B9J" eventType="touchUpInside" id="qQu-h9-6O4"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdz-Wx-Ae2">
@@ -79,7 +78,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EbI-aA-4QI">
                                                 <rect key="frame" x="0.0" y="0.0" width="310.5" height="133.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRn-li-7EP">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRn-li-7EP">
                                                         <rect key="frame" x="0.0" y="0.0" width="103.5" height="133.5"/>
                                                         <color key="backgroundColor" red="0.40400278568267822" green="0.42715439200401306" blue="0.45098096132278442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
@@ -87,10 +86,10 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="first_BTN:" destination="JXV-FE-B9J" eventType="touchUpInside" id="gf6-am-JWo"/>
+                                                            <action selector="test:" destination="JXV-FE-B9J" eventType="touchUpInside" id="9W3-dY-k08"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw7-lX-bzr">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw7-lX-bzr">
                                                         <rect key="frame" x="103.5" y="0.0" width="103.5" height="133.5"/>
                                                         <color key="backgroundColor" red="0.40400278568267822" green="0.42715439200401306" blue="0.45098096132278442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
@@ -98,10 +97,10 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="second_BTN:" destination="JXV-FE-B9J" eventType="touchUpInside" id="VAu-P0-nxh"/>
+                                                            <action selector="test:" destination="JXV-FE-B9J" eventType="touchUpInside" id="ZgR-tW-m6a"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViJ-nV-Ueq">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViJ-nV-Ueq">
                                                         <rect key="frame" x="207" y="0.0" width="103.5" height="133.5"/>
                                                         <color key="backgroundColor" red="0.40400278568267822" green="0.42715439200401306" blue="0.45098096132278442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
@@ -109,7 +108,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="third_BTN:" destination="JXV-FE-B9J" eventType="touchUpInside" id="DwD-t7-shE"/>
+                                                            <action selector="test:" destination="JXV-FE-B9J" eventType="touchUpInside" id="XV6-qd-QwO"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -134,7 +133,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ehO-Fe-OTT">
                                                 <rect key="frame" x="0.0" y="0.0" width="310.5" height="134"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FB-hD-gBd">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FB-hD-gBd">
                                                         <rect key="frame" x="0.0" y="0.0" width="103.5" height="134"/>
                                                         <color key="backgroundColor" red="0.40400278569999998" green="0.42715439199999999" blue="0.45098096129999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
@@ -142,10 +141,10 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="fourth_BTN:" destination="JXV-FE-B9J" eventType="touchUpInside" id="JuX-RU-y4y"/>
+                                                            <action selector="test:" destination="JXV-FE-B9J" eventType="touchUpInside" id="nvb-ZC-RMo"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZK-Tl-s3p">
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZK-Tl-s3p">
                                                         <rect key="frame" x="103.5" y="0.0" width="103.5" height="134"/>
                                                         <color key="backgroundColor" red="0.40400278569999998" green="0.42715439199999999" blue="0.45098096129999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
@@ -153,10 +152,10 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="fifth_BTN:" destination="JXV-FE-B9J" eventType="touchUpInside" id="zuU-1w-zJR"/>
+                                                            <action selector="test:" destination="JXV-FE-B9J" eventType="touchUpInside" id="2hk-6X-YeZ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="174-rs-H8m">
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="174-rs-H8m">
                                                         <rect key="frame" x="207" y="0.0" width="103.5" height="134"/>
                                                         <color key="backgroundColor" red="0.40400278569999998" green="0.42715439199999999" blue="0.45098096129999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
@@ -164,7 +163,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="sixth_BTN:" destination="JXV-FE-B9J" eventType="touchUpInside" id="Hjb-LR-Cw1"/>
+                                                            <action selector="test:" destination="JXV-FE-B9J" eventType="touchUpInside" id="cWv-LL-1dh"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -189,7 +188,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0ef-AC-Dca">
                                                 <rect key="frame" x="0.0" y="0.0" width="310.5" height="133.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFO-tb-xvT">
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFO-tb-xvT">
                                                         <rect key="frame" x="0.0" y="0.0" width="103.5" height="133.5"/>
                                                         <color key="backgroundColor" red="0.40400278569999998" green="0.42715439199999999" blue="0.45098096129999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
@@ -197,10 +196,10 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="seventh_BTN:" destination="JXV-FE-B9J" eventType="touchUpInside" id="bwS-qw-Kmv"/>
+                                                            <action selector="test:" destination="JXV-FE-B9J" eventType="touchUpInside" id="bnK-fY-Ezb"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIe-To-4wR">
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIe-To-4wR">
                                                         <rect key="frame" x="103.5" y="0.0" width="103.5" height="133.5"/>
                                                         <color key="backgroundColor" red="0.40400278569999998" green="0.42715439199999999" blue="0.45098096129999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
@@ -208,10 +207,10 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="eights_BTN:" destination="JXV-FE-B9J" eventType="touchUpInside" id="hhZ-2v-UWd"/>
+                                                            <action selector="test:" destination="JXV-FE-B9J" eventType="touchUpInside" id="KTa-vK-3Zt"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWp-DN-EMO">
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWp-DN-EMO">
                                                         <rect key="frame" x="207" y="0.0" width="103.5" height="133.5"/>
                                                         <color key="backgroundColor" red="0.40400278569999998" green="0.42715439199999999" blue="0.45098096129999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
@@ -219,7 +218,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="nineth_BTN:" destination="JXV-FE-B9J" eventType="touchUpInside" id="0DP-Xm-WfZ"/>
+                                                            <action selector="test:" destination="JXV-FE-B9J" eventType="touchUpInside" id="3dO-NG-gWv"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -252,7 +251,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="zero_BTN:" destination="JXV-FE-B9J" eventType="touchUpInside" id="4eW-Zi-ByO"/>
+                                                    <action selector="test:" destination="JXV-FE-B9J" eventType="touchUpInside" id="c3p-DT-zOk"/>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6k-n9-CSb">
@@ -293,11 +292,10 @@
                         <viewLayoutGuide key="safeArea" id="Uam-h0-FUg"/>
                     </view>
                     <connections>
-                        <outlet property="result_LBL" destination="SDX-gt-P9Q" id="dw2-gx-LrQ"/>
+                        <outlet property="result_LBL" destination="SDX-gt-P9Q" id="1VZ-l1-edg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpI-xt-AfD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="73e-mb-Bdu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="128.98550724637681" y="142.63392857142856"/>
         </scene>
