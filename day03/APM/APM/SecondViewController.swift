@@ -6,39 +6,23 @@
 //  Copyright © 2020 Maksym SALIUTA. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 
-class SecondViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class SecondViewController: UIViewController, UIScrollViewDelegate {
 
-    var imageView : UIImageView?
-    var image : UIImage?
-    
-    let items = ["1", "2", "3"]
-    
-    @IBOutlet weak var collectionView: UICollectionView!
-    
+    @IBOutlet weak var myScroll: UIScrollView!
+    @IBOutlet weak var myImg: UIImageView!
     
     override func viewDidLoad() {
-//        super.viewDidLoad()
-//        image = UIImage(named: "nasa1")
-//        imageView = UIImageView(image: image)
-//        //collectionView.addSubview(im)
-//
+        super.viewDidLoad()
+        self.myScroll.minimumZoomScale = 1.0
+        self.myScroll.maximumZoomScale = 6.0
+        
         // Do any additional setup after loading the view.
     }
     
-    
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      return items.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-      let cell = collectionView
-        .dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-      cell.backgroundColor = .black
-      return cell
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return self.myImg
     }
     
 }
