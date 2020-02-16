@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EF6192423F9711D002DC724 /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6192323F9711D002DC724 /* DestinationViewController.swift */; };
 		A702275323F8B0FC007D2ECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702275223F8B0FC007D2ECF /* AppDelegate.swift */; };
 		A702275523F8B0FC007D2ECF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702275423F8B0FC007D2ECF /* SceneDelegate.swift */; };
 		A702275723F8B0FC007D2ECF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702275623F8B0FC007D2ECF /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4EF6192323F9711D002DC724 /* DestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationViewController.swift; sourceTree = "<group>"; };
 		A702274F23F8B0FC007D2ECF /* rush01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rush01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A702275223F8B0FC007D2ECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A702275423F8B0FC007D2ECF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				A702275823F8B0FC007D2ECF /* Main.storyboard */,
 				A78F2EB923F90DC500EEC8F8 /* myTableViewCell.swift */,
 				A702276623F8BEC2007D2ECF /* LocationSearchTable.swift */,
+				4EF6192323F9711D002DC724 /* DestinationViewController.swift */,
 				A702275B23F8B0FE007D2ECF /* Assets.xcassets */,
 				A702275D23F8B0FE007D2ECF /* LaunchScreen.storyboard */,
 				A702276023F8B0FE007D2ECF /* Info.plist */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A702275723F8B0FC007D2ECF /* ViewController.swift in Sources */,
+				4EF6192423F9711D002DC724 /* DestinationViewController.swift in Sources */,
 				A78F2EBA23F90DC500EEC8F8 /* myTableViewCell.swift in Sources */,
 				A702275323F8B0FC007D2ECF /* AppDelegate.swift in Sources */,
 				A702275523F8B0FC007D2ECF /* SceneDelegate.swift in Sources */,

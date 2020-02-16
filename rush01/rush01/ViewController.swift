@@ -18,12 +18,23 @@ class ViewController: UIViewController, MKMapViewDelegate {
     let locationManager = CLLocationManager()
     var resultSearchController:UISearchController? = nil
     var selectedPin: MKPlacemark? = nil
+    var request = MKDirections.Request()
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBAction func meButtn(_ sender: UIButton) {
+        if (CLLocationManager.authorizationStatus() != .authorizedWhenInUse) {
+            let alert = UIAlertController(title: "Error", message: "Can not update location because application has no permission", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true)
+        } else {
+            let region = MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -45,17 +56,26 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
-        
-        // Do any additional setup after loading the view.
-    }
     
-    //    func getDirections(){
-    //        if let selectedPin = selectedPin {
-    //            let mapItem = MKMapItem(placemark: selectedPin)
-    //            let launchOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
-    //            mapItem.openInMaps(launchOptions: launchOptions)
-    //        }
-    //    }
+    }
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        renderer.strokeColor = UIColor.blue
+        return renderer
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
+    @IBAction func unWindSegue(segue: UIStoryboardSegue){
+        let directions = MKDirections(request: request)
+        directions.calculate { [unowned self] response, error in
+            guard let unwrappedResponse = response else { return }
+
+            for route in unwrappedResponse.routes {
+                self.mapView.addOverlay(route.polyline)
+                self.mapView.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
+            }
+          }
+    }
 }
 
 extension ViewController : CLLocationManagerDelegate {
@@ -95,7 +115,8 @@ extension ViewController: HandleMapSearch {
         selectedPin = placemark
         // clear existing pins
         mapView.removeAnnotations(mapView.annotations)
-        
+        let overlays = mapView.overlays
+        mapView.removeOverlays(overlays)
         let annotation = MKPointAnnotation()
         
         annotation.coordinate = placemark.coordinate
@@ -116,24 +137,4 @@ extension ViewController: HandleMapSearch {
         mapView.setRegion(region, animated: true)
     }
 }
-
-//extension ViewController {
-//    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?{
-//        if annotation is MKUserLocation {
-//            //return nil so map view draws "blue dot" for standard user location
-//            return nil
-//        }
-//        let reuseId = "pin"
-//        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
-//        pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-//        pinView?.pinTintColor = UIColor.orange
-//        pinView?.canShowCallout = true
-//        let smallSquare = CGSize(width: 30, height: 30)
-//        let button = UIButton(frame: CGRect(origin: CGPoint.zero, size: smallSquare))
-//        button.setBackgroundImage(UIImage(named: "car"), for: UIControl.State.normal)
-//        button.addTarget(self, action: Selector(("getDirections")), for: .touchUpInside)
-//        pinView?.leftCalloutAccessoryView = button
-//        return pinView
-//    }
-//}
 
