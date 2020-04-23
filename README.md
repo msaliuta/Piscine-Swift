@@ -4,8 +4,9 @@ UnitFactory 👉 Swift Piscine
 # Calculator (<a href="https://github.com/msaliuta/Piscine-Swift/tree/master/d00">view this project</a>)
 
 <p float="left">
-  <img src="https://github.com/msaliuta/Piscine-Swift/blob/master/photo/day0_2.jpg" width="200" />
-  <img src="https://github.com/msaliuta/Piscine-Swift/blob/master/photo/calc_1.jpg" width="200" /> 
+  <img src="https://github.com/msaliuta/Piscine-Swift/blob/master/photo/day0-1.jpg" width="200" />
+  <img src="https://github.com/msaliuta/Piscine-Swift/blob/master/photo/day0-2.jpg" height="180" /> 
+  <img src="https://github.com/msaliuta/Piscine-Swift/blob/master/photo/day0-3.jpg" width="200" />
 </p>
 
 # APM (<a href="https://github.com/msaliuta/Piscine-Swift/tree/master/d03">view this project</a>)
